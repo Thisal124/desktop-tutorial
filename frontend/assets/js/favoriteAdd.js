@@ -50,7 +50,7 @@ function displayFavorites() {
         product.name
       }" width="50" height="50"></td>
           <td>${product.name}</td>
-          <td>$${productTotal.toFixed(2)}</td>
+          <td>LKR${productTotal.toFixed(2)}</td>
           <td><button onclick="removeFromFavorites(${index})">Remove</button></td>
         </tr>
       `;
@@ -58,7 +58,7 @@ function displayFavorites() {
 
     const totalElement = document.querySelector(".favorites__total-price");
     if (totalElement) {
-      totalElement.textContent = `Total: $${total.toFixed(2)}`;
+      totalElement.textContent = `Total: LKR${total.toFixed(2)}`;
     }
   } else {
     console.error(
