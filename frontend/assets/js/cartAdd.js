@@ -62,7 +62,7 @@ function displayCartItems() {
             <span style="margin-left: 14px;">${product.quantity}</span>
             <button onclick="changeQuantity('plus', ${index})">+</button>
           </td>
-          <td>$${(product.price * product.quantity).toFixed(2)}</td>
+          <td>LKR${(product.price * product.quantity).toFixed(2)}</td>
           <td><button onclick="removeFromCart(${index})">Delete</button></td>
         </tr>
       `;
@@ -70,7 +70,7 @@ function displayCartItems() {
 
     document.querySelector(
       ".cart__total-price"
-    ).textContent = `Total: $${total.toFixed(2)}`;
+    ).textContent = `Total: LKR${total.toFixed(2)}`;
   } else {
     console.error("Element .cart__table_tr nie istnieje na tej stronie.");
   }
@@ -223,8 +223,8 @@ function displayOrders() {
         <img src="${order.image}" alt="${order.name}" width="50" height="50">
         <div>
           <h4>${order.name}</h4>
-          <p>Ilość: ${order.quantity}</p>
-          <p>Cena: $${(order.price * order.quantity).toFixed(2)}</p>
+          <p>Quantity: ${order.quantity}</p>
+          <p>Cena: LKR${(order.price * order.quantity).toFixed(2)}</p>
         </div>
       `;
     ordersList.appendChild(orderElement);
